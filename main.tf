@@ -1,21 +1,21 @@
 module "vpc-a" {
   source = "./vpc"
 
-  name = "mhko-terraform-vpc1"
-  cidr = "10.10.0.0/16"
+  name = "terraform-demo-vpc1"
+  cidr = "10.100.0.0/16"
   create_igw = true
   create_natgw = true
 
   public_subnets = {
     sub-1 = {
-      az   = "ap-northeast-2c"
-      cidr = "10.10.10.0/24"
+      az   = "us-east-2c"
+      cidr = "10.100.10.0/24"
     }
   }
   private_subnets = {
     sub-1 = {
-      az   = "ap-northeast-2c"
-      cidr = "10.10.20.0/24"
+      az   = "us-east-2c"
+      cidr = "10.100.20.0/24"
     }
   }
 }
@@ -23,15 +23,15 @@ module "vpc-a" {
 module "vpc-b" {
   source = "./vpc"
 
-  name = "mhko-terraform-vpc2"
-  cidr = "10.20.0.0/16"
+  name = "terraform-demo-vpc2"
+  cidr = "10.200.0.0/16"
   create_igw = false
   create_natgw = false
 
   private_subnets = {
     sub-1 = {
-      az   = "ap-northeast-2c"
-      cidr = "10.20.10.0/24"
+      az   = "us-east-2c"
+      cidr = "10.200.10.0/24"
     }
   }
 }
@@ -45,7 +45,7 @@ module "ec2_instance-a" {
 
   name          = "terraform_private_demo_a"
   instance_type = "t2.micro"
-  ami           = "ami-04ea5b2d3c8ceccf8"
+  ami           = "ami-0eea504f45ef7a8f7"
   instance_public_ip = false
 }
 
@@ -58,6 +58,6 @@ module "ec2_instance-b" {
 
   name          = "terraform_private_demo_b"
   instance_type = "t2.micro"
-  ami           = "ami-04ea5b2d3c8ceccf8" 
+  ami           = "ami-0eea504f45ef7a8f7"
   instance_public_ip = false
 }
