@@ -8,13 +8,13 @@ module "vpc-a" {
 
   public_subnets = {
     sub-1 = {
-      az   = "us-east-2c"
+      az   = "ap-northeast-2c"
       cidr = "10.10.10.0/24"
     }
   }
   private_subnets = {
     sub-1 = {
-      az   = "us-east-2c"
+      az   = "ap-northeast-2c"
       cidr = "10.10.20.0/24"
     }
   }
