@@ -30,7 +30,7 @@ module "vpc-b" {
 
   private_subnets = {
     sub-1 = {
-      az   = "ap-northeast-2"
+      az   = "ap-northeast-2c"
       cidr = "10.20.10.0/24"
     }
   }
