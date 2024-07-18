@@ -45,7 +45,7 @@ module "ec2_instance-a" {
 
   name          = "terraform_private_demo_a"
   instance_type = "t2.micro"
-  ami           = "ami-0eea504f45ef7a8f7"
+  ami           = "ami-04ea5b2d3c8ceccf8"
   instance_public_ip = false
 }
 
@@ -58,6 +58,6 @@ module "ec2_instance-b" {
 
   name          = "terraform_private_demo_b"
   instance_type = "t2.micro"
-  ami           = "ami-0eea504f45ef7a8f7"
+  ami           = "ami-04ea5b2d3c8ceccf8" 
   instance_public_ip = false
 }
